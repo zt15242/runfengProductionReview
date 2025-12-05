@@ -98,5 +98,8 @@
             <position>before</position>
             <order>1</order>
         </approvalchooser>
+		 <bulkApiCallBack>
+            <class>other.rainbow.service.SAPProductWebService</class>
+        </bulkApiCallBack>
     </config>
 </configs>
