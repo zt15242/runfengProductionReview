@@ -1,3 +1,8 @@
+/**
+ * @ClassName ProductCheck
+ * @Auther Chi-Lynne
+ * @Discription 按钮手动调用查询库存
+ **/
 package other.rainbow.orderapp.button;
 
 import com.alibaba.fastjson.JSONArray;

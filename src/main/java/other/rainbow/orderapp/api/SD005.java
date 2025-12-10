@@ -1,3 +1,8 @@
+/**
+ * @ClassName SD005
+ * @Auther Chi-Lynne
+ * @Discription 调用订单接口，推送订单数据致SAP
+ **/
 package other.rainbow.orderapp.api;
 
 import com.alibaba.fastjson.JSON;

@@ -31,7 +31,11 @@ import java.time.ZoneId;
 import java.util.*;
 import java.util.stream.Collectors;
 
-
+/**
+ * 按钮手动调用SD005接口
+ * @author Chi-Lynne张宇恒
+ *
+ */
 @RestApi(baseUrl = "/button")
 public class CancelToSap {
     private static final Logger logger = LoggerFactory.getLogger();

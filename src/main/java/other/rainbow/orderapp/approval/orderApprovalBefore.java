@@ -1,3 +1,8 @@
+/**
+ * @ClassName orderApprovalBefore
+ * @Auther Chi-Lynne
+ * @Discription 提交审批前校验信用是否足够
+ **/
 package other.rainbow.orderapp.approval;
 
 import com.alibaba.fastjson.JSONArray;
@@ -75,6 +80,7 @@ public class orderApprovalBefore implements ApprovalEvent {
 
     /**
      * 校验逻辑实现，允许正常提交情况下，返回true，否则返回false
+     * 调用信用接口查询信用
      * @param request
      * @return true:正常提交;false:不允许提交，提示错误
      */

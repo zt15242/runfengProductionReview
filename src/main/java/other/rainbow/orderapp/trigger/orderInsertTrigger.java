@@ -29,7 +29,6 @@ import other.rainbow.orderapp.button.CancelToSap;
 import other.rainbow.orderapp.common.NeoCrmRkhdService;
 import other.rainbow.orderapp.cstss.CustomException;
 import other.rainbow.orderapp.cstss.SqlFormatUtils;
-import other.rainbow.orderapp.tsts.TextMessageRestReq;
 
 import java.io.IOException;
 import java.math.BigDecimal;
@@ -37,7 +36,11 @@ import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.stream.Collectors;
 import other.rainbow.orderapp.common.ObjectOptionValueRetrieval;
-
+/**
+ * 订单触发器
+ * @author rkhd
+ *
+ */
 public class orderInsertTrigger implements Trigger {
 
     private static final Logger logger = LoggerFactory.getLogger();
@@ -70,8 +73,6 @@ public class orderInsertTrigger implements Trigger {
         logger.error("进来catch2：");
         List<DataResult> dataResultList = new ArrayList<>();
         try {
-            List<CurrencyOption> currencyOption = CurrencyListReq.instance().getGlobalPicks();
-            List<PickOption> currency__cList = GlobalPicksReq.instance().getGlobalPicks("Currency__c");
             List<PickOption> payment_Term__cList = GlobalPicksReq.instance().getGlobalPicks("Payment_Term__c");
             List<PickOption> paymentOrderBy__cList = GlobalPicksReq.instance().getGlobalPicks("PaymentOrderBy__c");
             List<PickOption> sales_Org__cList = GlobalPicksReq.instance().getGlobalPicks("SalesOrg__c");

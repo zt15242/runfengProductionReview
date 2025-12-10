@@ -1,3 +1,8 @@
+/**
+ * @ClassName ProductSalesInfoSyncToSAP
+ * @Auther Chi-Lynne张宇恒
+ * @Discription 提交审批后调用库存接口
+ **/
 package other.rainbow.orderapp.api;
 
 import com.alibaba.fastjson.JSON;
@@ -38,7 +43,7 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.*;
 
-// 调用库存接口
+// 提交审批后调用库存接口
 public class ProductSalesInfoSyncToSAP implements ApprovalEvent {
     static Map<String,Long> goodIdMap = new HashMap<>();
     static Map<String,Long> proIdMap = new HashMap<>(); // 20250109   zyh   增加产品
@@ -456,7 +461,11 @@ public class ProductSalesInfoSyncToSAP implements ApprovalEvent {
         return returnResult;
     }
 
-
+    /**
+     * @MethodName ProductSalesInfoSyncToSAP
+     * @Auther Chi-Lynne
+     * @Discription 提交后调用接口查询库存
+     **/
     public static  ReturnResult productSalesInfo(String Id, String changeType) throws Exception {
         long longID = Long.parseLong(Id);
         RoundingMode roundingMode = RoundingMode.HALF_UP;
@@ -927,6 +936,8 @@ public class ProductSalesInfoSyncToSAP implements ApprovalEvent {
                 "查询产品库存信息", "CRM查询SAP库存信息");*/
         return returnResult;
     }
+
+    //Crm发送数据致SAP
     public static HttpResult crmToSap(List<items> itemsList) throws XsyHttpException, ApiEntityServiceException, IOException, ScriptBusinessException, InterruptedException, CustomConfigException {
         String errorMessage = "";
         Boolean isSuccess = true;
@@ -1336,6 +1347,7 @@ public class ProductSalesInfoSyncToSAP implements ApprovalEvent {
                 "查询产品库存信息", "CRM查询SAP库存信息");
         return result;
     }
+    // 校验进行中的库存
     public static Map<String,BigDecimal> checkNum(List<String> wlhList){
         Map<String,BigDecimal> numMap = new HashMap<>();
         Map<String,String> errSQL = new HashMap<>();

@@ -1,3 +1,8 @@
+/**
+ * @ClassName ProductSyncToSAPApi
+ * @Auther Chi-Lynne
+ * @Discription 按钮手动调用订单接口，推送订单数据致SAP
+ **/
 package other.rainbow.orderapp.api;
 
 import com.alibaba.fastjson.JSONArray;

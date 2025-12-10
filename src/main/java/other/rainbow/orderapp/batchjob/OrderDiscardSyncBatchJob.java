@@ -1,3 +1,8 @@
+/**
+ * OrderDiscardSyncBatchJob
+ * 删除订单应收单，订单作废
+ * Chi Lynne
+ */
 package other.rainbow.orderapp.batchjob;
 
 import com.alibaba.fastjson.JSON;

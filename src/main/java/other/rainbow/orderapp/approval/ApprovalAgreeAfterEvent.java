@@ -14,8 +14,8 @@ import java.io.IOException;
 
 
 /**
- * 审批流/工作流，节点级审批通过后代码脚本事件:审批同意后，同步/异步执行
- * @author rkhd
+ * 审批通过后事件
+ * @author Chi-Lynne 张宇恒
  *
  */
 public class ApprovalAgreeAfterEvent implements ApprovalEvent {
@@ -52,7 +52,7 @@ public class ApprovalAgreeAfterEvent implements ApprovalEvent {
     }
 
     /**
-     * 通过后事件实现
+     * 通过后事件实现 ，调用订单接口，推送至SAP
      * @param request
      */
     private void agreeAfter(ApprovalEventRequest request) throws ScriptBusinessException, IOException, InterruptedException, XsyHttpException, ApiEntityServiceException {

@@ -25,7 +25,11 @@ import other.rainbow.orderapp.trigger.PickOption;
 import java.io.IOException;
 import java.math.BigDecimal;
 import java.util.*;
-
+/**
+ * 存在DN单，则不允许废弃订单
+ * @author Chi-Lynne 张宇恒
+ *
+ */
 public class DNToOrderRuleEvent implements RuleEvent {
     List<PickOption> deliveryPostStatus__cList = GlobalPicksReq.instance().getGlobalPicks("DeliveryPostStatus__c");
     private Logger logger = LoggerFactory.getLogger();

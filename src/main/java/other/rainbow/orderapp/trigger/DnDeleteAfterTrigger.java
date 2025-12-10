@@ -23,7 +23,11 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
+/**
+ * 删除DN单时判断关联的订单是否还存在DN单
+ * @author Chi-Lynne张宇恒
+ *
+ */
 public class DnDeleteAfterTrigger implements Trigger {
     private static final Logger logger = LoggerFactory.getLogger();
     @Override

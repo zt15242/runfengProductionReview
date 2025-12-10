@@ -1,3 +1,8 @@
+/**
+ * orderApprovalSubAfter
+ * Chi Lynne
+ * 审批提交后更新订单状态
+ */
 package other.rainbow.orderapp.approval;
 import com.rkhd.platform.sdk.creekflow.approvalevent.ApprovalEvent;
 import com.rkhd.platform.sdk.creekflow.approvalevent.ApprovalEventRequest;

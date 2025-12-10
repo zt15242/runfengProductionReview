@@ -1,3 +1,8 @@
+/**
+ * @ClassName ApprovalChooseUsers
+ * @Auther Chi-Lynne
+ * @Discription 订单审批动态选人
+ **/
 package other.rainbow.orderapp.approval;
 
 import com.alibaba.fastjson.JSONArray;

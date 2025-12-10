@@ -10,7 +10,11 @@ import other.rainbow.orderapp.cstss.CustomException;
 
 import java.io.IOException;
 import java.util.List;
-
+/**
+ * 获取公用选项列表
+ * @author rkhd
+ *
+ */
 public class GlobalPicksReq {
 
     private static final String RESULT_CODE = "0";
